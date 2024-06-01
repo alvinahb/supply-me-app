@@ -1,5 +1,5 @@
 """
-ASGI config for supply-me-app project.
+ASGI config for supplyme project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 

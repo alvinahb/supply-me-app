@@ -1,1 +1,4 @@
 **/__pycache__
+Makefile
+supplyme/migrations
+app/config.py

@@ -1,5 +1,5 @@
 """
-WSGI config for supply-me-app project.
+WSGI config for supplyme project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
