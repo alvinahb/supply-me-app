@@ -7,19 +7,19 @@ createdb:
 dropdb:
 	docker exec -it postgres15 dropdb supply-me-test
 
-migrate:
-	python manage.py migrate
-
 migrations:
 	python manage.py makemigrations supplyme
+
+migrate:
+	python manage.py migrate
 
 sqlmigrate:
 	python manage.py sqlmigrate supplyme 0001
 
-superuser:
-	python manage.py createsuperuser
+test:
+	python manage.py test ./supplyme/tests
 
 server:
 	python manage.py runserver
 
-.PHONY: postgres createdb dropdb migrate migrations sqlmigrate superuser server
+.PHONY: postgres createdb dropdb migrate migrations sqlmigrate server

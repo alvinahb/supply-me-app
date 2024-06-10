@@ -1,3 +1,4 @@
+from django.contrib.auth.models import AbstractUser
 from django.db import models
 
 
@@ -23,15 +24,9 @@ class Organization(models.Model, DateFields):
         return self.name
 
 
-class User(models.Model, DateFields):
-    username = models.CharField(max_length=20, null=False)
-    password = models.CharField(max_length=40, null=False)  # To be encrypted
-    email  = models.CharField(max_length=20, null=False)  # To be encrypted
+class User(AbstractUser):
     organization = models.ForeignKey(Organization, on_delete=models.CASCADE,
                                      null=True, blank=True)
-
-    def __str__(self):
-        return self.username
 
 
 class Category(models.Model):

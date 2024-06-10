@@ -1,8 +1,9 @@
 from supplyme.models import User
 
 
-def create_user(username, password, email):
-    user = User(username=username, password=password, email=email)
+def create_user(username, password, first_name, last_name, email):
+    user = User(username=username, password=password, first_name=first_name,
+                last_name=last_name, email=email)
     user.save()
 
     return user
